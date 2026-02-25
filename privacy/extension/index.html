@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>개인정보처리방침 - BlogMate Chrome 확장 프로그램</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, 'Pretendard', 'Malgun Gothic', sans-serif;
+      color: #334155;
+      background: #f8fafc;
+      line-height: 1.7;
+    }
+    .header {
+      background: #fff;
+      border-bottom: 1px solid #e2e8f0;
+      padding: 20px 0;
+    }
+    .header-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .logo {
+      width: 32px; height: 32px;
+      background: #03C75A;
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      color: #fff; font-weight: 700; font-size: 18px;
+    }
+    .logo-text { font-size: 18px; font-weight: 700; color: #1e293b; }
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 4px;
+    }
+    .subtitle {
+      font-size: 14px;
+      color: #94a3b8;
+      margin-bottom: 40px;
+    }
+    section { margin-bottom: 32px; }
+    h2 {
+      font-size: 17px;
+      font-weight: 600;
+      color: #0f172a;
+      margin-bottom: 12px;
+    }
+    p { margin-bottom: 10px; font-size: 15px; }
+    ul {
+      list-style: disc;
+      padding-left: 24px;
+      margin: 8px 0 12px;
+    }
+    li { margin-bottom: 4px; font-size: 15px; }
+    strong { color: #1e293b; }
+    a { color: #2563eb; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .effective-date {
+      margin-top: 48px;
+      font-size: 13px;
+      color: #94a3b8;
+    }
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 13px;
+      color: #94a3b8;
+      border-top: 1px solid #e2e8f0;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-inner">
+      <div class="logo">B</div>
+      <span class="logo-text">BlogMate</span>
+    </div>
+  </div>
+
+  <main>
+    <h1>개인정보처리방침</h1>
+    <p class="subtitle">BlogMate Chrome 확장 프로그램 전용</p>
+
+    <section>
+      <h2>1. 수집하는 데이터</h2>
+      <p>BlogMate 확장 프로그램은 기능 제공을 위해 다음 데이터를 브라우저의 로컬 저장소(chrome.storage.local)에 저장합니다:</p>
+      <ul>
+        <li><strong>답방 큐:</strong> 사용자가 추가한 블로그 URL 및 방문 상태</li>
+        <li><strong>댓글 풀:</strong> 사용자가 등록한 댓글 템플릿</li>
+        <li><strong>설정값:</strong> 사용자가 지정한 확장 프로그램 옵션</li>
+        <li><strong>방문 상태:</strong> 답방 완료 여부 표시</li>
+      </ul>
+      <p>모든 데이터는 사용자의 브라우저 내부에만 저장되며 외부 서버로 전송되지 않습니다.</p>
+    </section>
+
+    <section>
+      <h2>2. 수집하지 않는 데이터</h2>
+      <p>다음 정보는 일절 수집하지 않습니다:</p>
+      <ul>
+        <li>네이버 계정 정보 (아이디, 비밀번호)</li>
+        <li>브라우징 히스토리 (방문 기록)</li>
+        <li>개인 식별 정보 (이름, 이메일, 전화번호 등)</li>
+        <li>위치 정보</li>
+        <li>금융 정보 (결제 수단, 카드 번호 등)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>3. 웹사이트 데이터 접근</h2>
+      <p>확장 프로그램은 네이버 블로그(blog.naver.com, m.blog.naver.com) 페이지에서만 동작하며, 다음 DOM 요소에 접근합니다:</p>
+      <ul>
+        <li>블로그 글 제목 및 블로그 ID (답방 큐 구성)</li>
+        <li>공감(좋아요) 버튼 영역 (공감 감지)</li>
+        <li>댓글 입력 영역 (댓글 템플릿 추천)</li>
+        <li>에디터 영역 (글 입력 도우미, 사용자 요청 시에만)</li>
+      </ul>
+      <p>이 데이터는 확장 프로그램의 기능 제공 목적으로만 사용되며 외부로 전송되지 않습니다.</p>
+    </section>
+
+    <section>
+      <h2>4. 외부 데이터 전송</h2>
+      <p>확장 프로그램은 기본적으로 외부 서버와 통신하지 않습니다. 단, 다음의 선택적 기능을 사용자가 직접 활성화한 경우에 한해 외부 API와 통신합니다:</p>
+      <ul>
+        <li><strong>Gemini API (선택 기능):</strong> 댓글 추천 기능 사용 시, 사용자가 직접 입력한 본인의 API 키를 통해 Google Gemini API와 통신합니다. 이 경우 전송되는 데이터는 댓글 생성에 필요한 최소한의 블로그 글 내용입니다.</li>
+      </ul>
+      <p>Gemini API 사용 시 Google의 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">개인정보처리방침</a>이 추가로 적용됩니다.</p>
+    </section>
+
+    <section>
+      <h2>5. 데이터 저장 및 보관</h2>
+      <p>모든 데이터는 사용자의 브라우저 내부(chrome.storage.local)에만 저장됩니다. 외부 서버, 클라우드, 데이터베이스에 저장되지 않습니다.</p>
+      <p>데이터를 삭제하려면 다음 방법을 사용하세요:</p>
+      <ul>
+        <li>확장 프로그램 설정에서 "데이터 초기화" 실행</li>
+        <li>Chrome 설정 → 확장 프로그램 → BlogMate → "사이트 데이터 삭제"</li>
+        <li>확장 프로그램을 제거하면 모든 데이터가 자동으로 삭제됩니다</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>6. 데이터 보호</h2>
+      <ul>
+        <li>모든 데이터는 사용자 기기의 로컬 저장소에만 보관되어 외부 유출 위험이 없습니다</li>
+        <li>선택적 외부 API 통신 시 HTTPS 암호화가 적용됩니다</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>7. 사용자 권리</h2>
+      <p>사용자는 언제든지 다음의 권리를 행사할 수 있습니다:</p>
+      <ul>
+        <li>저장된 데이터 확인 (확장 프로그램 설정 또는 Chrome DevTools)</li>
+        <li>저장된 데이터 수정 및 삭제</li>
+        <li>확장 프로그램 제거를 통한 모든 데이터 완전 삭제</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>8. 아동 보호</h2>
+      <p>본 확장 프로그램은 13세 미만 아동을 대상으로 하지 않으며, 의도적으로 아동의 개인정보를 수집하지 않습니다.</p>
+    </section>
+
+    <section>
+      <h2>9. 방침 변경</h2>
+      <p>본 방침이 변경될 경우, 변경 사항은 이 페이지에 게시되며 시행일이 업데이트됩니다. 중요한 변경 시 확장 프로그램 업데이트 노트를 통해 안내합니다.</p>
+    </section>
+
+    <section>
+      <h2>10. 문의</h2>
+      <p>개인정보 관련 문의는 아래로 연락해주세요.</p>
+      <p>이메일: <a href="mailto:support@blogmate.kr">support@blogmate.kr</a></p>
+    </section>
+
+    <p class="effective-date">시행일: 2026년 2월 24일</p>
+  </main>
+
+  <footer>
+    &copy; 2026 BlogMate. All rights reserved.
+  </footer>
+</body>
+</html>
